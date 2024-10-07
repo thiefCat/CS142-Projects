@@ -4,3 +4,23 @@
  * Since CSS uses a global name space for classes we should use names starting
  * with "cs142-states-" here.
  */
+
+ input {
+  margin-left: 8px;
+ }
+
+ .input-box {
+  background-color: bisque;
+  font-size: 20px;
+  margin-top: 10px;
+ }
+
+ .input-show {
+  font-size: 25px;
+ }
+
+ .states {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: blueviolet;
+  font-size: 20px;
+ }

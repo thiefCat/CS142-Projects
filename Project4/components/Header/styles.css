@@ -1,0 +1,16 @@
+.header {
+  display: flex;
+  background-color: grey;
+  color: yellow;
+  text-align: center;
+}
+
+span {
+  flex-grow: 1;
+}
+
+
+.link-container {
+  display: flex;
+  gap: 20px;
+}

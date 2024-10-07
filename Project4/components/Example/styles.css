@@ -33,3 +33,14 @@
 .cs142-code-name {
   font-family: Courier New, monospace;
 }
+
+.motto-update {
+  margin: 4px;
+  color: red;
+  font-size: large;
+  background: lightgrey;
+}
+
+input {
+  margin-left: 10px;
+}

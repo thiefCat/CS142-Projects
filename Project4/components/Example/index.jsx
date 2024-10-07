@@ -1,11 +1,12 @@
 import React from "react";
 import "./styles.css";
+import Prism from "prismjs";
+import Header from "../Header";
 
 /**
  * Since this component shows code we include the https://prismjs.com/
  * formatter. We invoke it by labelling code blocks with class="language-jsx"
  */
-import Prism from "prismjs";
 import "prismjs/components/prism-jsx.js";
 import "../../node_modules/prismjs/themes/prism.css";
 
@@ -23,6 +24,7 @@ class Example extends React.Component {
     // variable 'name'.
     this.state = {
       name: window.cs142models.exampleModel().name,
+      motto: window.cs142models.exampleModel().motto,
       counter: 0,
       inputValue: "",
       buttonWasClicked: "",
@@ -69,6 +71,8 @@ class Example extends React.Component {
     this.setState({ inputValue: event.target.value });
   }
 
+  handleMottoChange = (event) => this.setState({motto: event.target.value});
+
   // Method called when the button is pushed
   /* eslint-disable-next-line no-unused-vars */
   handleButtonClick(buttonName, event) {
@@ -99,11 +103,21 @@ class Example extends React.Component {
 
   render() {
     return (
+      <div>
+      <Header></Header>
       <div className="container Example">
         <h1>CS142 Project 4 React.js Example</h1>
 
         <div className="motto-update">
-          {/* Your Problem 1 motto displaying and updating widget goes here */}
+            <h2>{this.state.name}</h2>
+            <p>My motto: {this.state.motto}</p>
+            Update Your Motto:
+            <input
+              id="mottoId"
+              type="text"
+              value={this.state.motto}
+              onChange={this.handleMottoChange}
+            />
         </div>
 
         <p>
@@ -326,7 +340,6 @@ class Example extends React.Component {
         <div className="cs142-example-output">
           <label htmlFor="inId">Input Field:</label>
           <input
-            id="inId"
             type="text"
             value={this.state.inputValue}
             onChange={this.handleChangeBound}
@@ -397,6 +410,7 @@ class Example extends React.Component {
             Call handleButtonClick function with two
           </button>
         </div>
+      </div>
       </div>
     );
   }

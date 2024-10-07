@@ -10,7 +10,6 @@ class DatePicker {
 
   render(date) {
     const table = document.createElement("table");
-    // table.
     this.container.appendChild(table);
     const top = this.getTopBar(date);
     table.appendChild(top);
